@@ -28,7 +28,7 @@ const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
   starWarsArr.sort((a,b) =>{
     return b.height - a.height;
-  });
+  }); 
   return starWarsArr;
 };
 
