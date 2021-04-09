@@ -27,13 +27,9 @@ let starWarsPeople = [
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
   starWarsArr.sort((a,b) =>{
-    if(a.height > b.height){
-      return 1;
-    }
-    else if(a.height < b.height){
-      return -1;
-    }
+    return b.height - a.height;
   });
+  return starWarsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,17 +91,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  // i tried till i feeling crazy . so i tried this way at last .
-  // enjoy looking at my code .
-  let newArr = [];
-  let deleted1 = arr.slice(1,2);
-  let deleted2 = arr.slice(2,3);
-  let deleted3 = arr.slice(3,4);
-  let deleted4 = arr.slice(4,5);
-  let deleted5 = arr.slice(5,6);
-  let deleted6 = arr.slice(6,7);
-  newArr.push(deleted1,deleted2,deleted3,deleted4,deleted5,deleted6);
-  return newArr;
+  return arr.split('');
 };
 
 
@@ -151,9 +137,12 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
   // Solution code here...
-  return result;
+  let names = [];
+  recipe.ingredients.forEach(data => {
+    names.push(data.slice(data.indexOf(' ', 3) + 1, data.length));
+  });
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
