@@ -62,11 +62,11 @@ const sortByChildren = (charArray) => {
     });
     property.sort((a,b) => {
       if(a.children.length === b.children.length){
-        return a.name.localeCompare(b.name);
+        return a.house.localeCompare(b.house);
       }
     });
-  }); return charArray;
-
+  });
+  return charArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
- return Object.keys(obj);
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +99,9 @@ const checkValues = (obj, value) => {
   if(Object.values(obj)){
     return true;
   } else {
-    return false;
+    if(Object.values !== value){
+      return false;
+    }
   }
 };
 
@@ -124,6 +126,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  let newArr = [];
+  Object.entries(obj).forEach(item => newArr.push(item.join(': ')));
+  return newArr;
 };
 
 
@@ -135,12 +140,12 @@ Write a function named getHouses that returns a new array containing the names o
 ------------------------------------------------------------------------------------------------ */
 
 const getHouses = (arr) => {
-  let houses = [];
   // Solution code here...
-  arr.forEach(elements => {
-    houses.push(elements.house);
+  let newArr = [];
+  arr.forEach(items =>{
+    newArr.push(items.house);
   });
-  return houses;
+  return newArr;
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -157,6 +162,11 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  arr.forEach(data => {
+    if(data.children>1){
+      return true;
+    }
+  });
 
 };
 
