@@ -11,7 +11,7 @@ For example:
   name: 'lloyd',
   age: 32,
   shoeSize: 12
-}, 
+},
 {
   name: 'jamie',
   age: 21,
@@ -43,11 +43,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 const count = (target, input) => {
   // Solution code here...
   let count = 0;
-  target.reduce((integer,values) => {
-    if(integer.includes(values)){
-      count++;
-    }
-  },0);
+  input.map(items => {
+    items.map(values => {
+      if(target === values){
+        return count++;
+      } else {
+        return count;
+      }
+    });
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,10 +67,26 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
-  input.reduce((acc,values) => {
-    acc = acc + values;
-    return acc;
-  },0);
+  // let looping =  input.map(val => {
+  //   val.reduce((acc,values) => {
+  //     acc = acc + values;
+  //     return acc;
+  //   },0);
+  // });
+  // return looping;
+  // input.reduce((array1, array2) => {
+  //   return array1.map((value, index) => {
+  //     return value + array2[index];
+  //   });
+  // });
+  let count = 0;
+  let sum = input.map(val => {
+    val.map(elements => {
+      return count += elements;
+    });
+    return count;
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +106,7 @@ const divisibleByFiveTwoToThePower = (input) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -148,16 +169,35 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let arrNames = data.map(items => {
+    if( items.gender === 'male' || items.gender === 'female'){
+      let names =  `${items.name}`;
+      return names.toString();
+    }
+  });
+  return arrNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
   // Solution code here...
+  // return data.reduce((a, b) => a.length <= b.length ? a : b);
+  data.map(elements => {
+    elements.sort((a,b) => {
+      if(a.height < b.height){
+        return -1;
+      }
+      else {
+        return 1;
+      }
+    });
+  });
+  return data.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
