@@ -188,7 +188,8 @@ let findShortest = (data) => {
   // Solution code here...
   // return data.reduce((a, b) => a.length <= b.length ? a : b);
   let shortest = data.map(elements => {
-    return Math.min(parseInt(elements.height));
+    let heightNum = parseInt(elements.height);
+    return Math.min(heightNum);
   });
   return shortest;
 };
