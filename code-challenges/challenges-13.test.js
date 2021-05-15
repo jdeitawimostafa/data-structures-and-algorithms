@@ -87,6 +87,19 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let happyArr=[];
+  arr.forEach((val=>{
+    if (val.includes(':)')){
+      let x=true;
+      happyArr.push(x);
+
+    }
+    else {
+      let y=false;
+      happyArr.push(y);
+    }
+  }));
+  return (happyArr.includes(false))? false:true;
 };
 
 /* ------------------------------------------------------------------------------------------------
