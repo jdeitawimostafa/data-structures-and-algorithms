@@ -7,6 +7,9 @@
 |CC2(readme)|[github](https://github.com/jdeitawimostafa/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-shift/README.md)|
 
 
+[code link](https://replit.com/@MostafaK1/cc2)
+
+
 ![shifting array](cc2(1).jpg)
 
 
