@@ -2,9 +2,22 @@
 
 ## Language: `JavaScript`
 
-### Folder and Challenge Setup
-
+### Folder and Challenge Setup :
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
+
+##### table of content code challenge 401: 
+
+
+
+|file name|link|
+|:-------:|:---|
+|CC1(readme)|[github](https://github.com/jdeitawimostafa/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-reverse/README.md)|
+|CC2(readme)|[github](https://github.com/jdeitawimostafa/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-shift/README.md)|
+|CC3(README.md)|[github](https://github.com/jdeitawimostafa/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-binary/README.md)|
+
+
+
+***
 
 ### Data Structure: New Implementation
 
