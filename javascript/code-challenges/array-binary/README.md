@@ -4,7 +4,7 @@
 
 ***
 
-[code](https://replit.com/@MostafaK1/test3#index.js)
+[code in repl](https://replit.com/@MostafaK1/test3#index.js)
 
 ***
 
