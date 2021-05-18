@@ -7,7 +7,7 @@
 
 
 
-![image](cc3.jgp)
+![image](cc3.jpg)
 
 
 ## Approach & Efficiency : 
