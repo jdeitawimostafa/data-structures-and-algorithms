@@ -56,15 +56,14 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  charArray.forEach(property => {
-    property.sort((a,b) => {
-      return a.children.length - b.children.length ;
-    });
-    property.sort((a,b) => {
-      if(a.children.length === b.children.length){
-        return a.house.localeCompare(b.house);
-      }
-    });
+  charArray.sort((a,b) =>{
+    if (a.children.length===b.children.length){
+ 
+      return  a.house.localeCompare(b.house)
+    }
+    else{
+      return  a.children.length-b.children.length
+    }
   });
   return charArray;
 };
@@ -96,13 +95,12 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  if(Object.values(obj)){
+  let x =Object.values(obj);
+  if (value==x){
     return true;
-  } else {
-    if(Object.values !== value){
-      return false;
-    }
-  }
+  } 
+  else{
+    return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,12 +160,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  arr.forEach(data => {
-    if(data.children>1){
-      return true;
+  for ( let i = 0 ; i< arr.length ; i++){
+    if (arr[i].name == character){
+      let values=  Object.values(arr[i]);
+      if (values[2].length > 0){
+        return true;
+      }else {
+        return false;
+      }
     }
-  });
-
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------

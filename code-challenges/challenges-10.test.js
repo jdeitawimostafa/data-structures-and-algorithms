@@ -103,6 +103,25 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let newArr= input.map(element=>{
+    let arr2=element.filter(item=>{
+      if (typeof item === 'number'){
+        if(item % 5 === 0){
+          return item;
+        }
+      }
+
+    });
+    return(arr2);
+  });
+  let array=newArr.map(element=>{
+    let arr3=element.map(item=>{
+      let x=Math.pow(2, item);
+      return x;
+    });
+    return arr3;
+  });
+  return(array);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -169,13 +188,18 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  let arrNames = data.map(items => {
-    if( items.gender === 'male' || items.gender === 'female'){
-      let names =  `${items.name}`;
-      return names.toString();
+  let arr= data.filter((val=>{
+    if (val.gender==='female' ||val.gender==='male'){
+      return val.name;
     }
+
+  }
+  ));
+  let arr2=arr.map(item=>{
+    return item.name;
   });
-  return arrNames;
+
+  return arr2.join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -187,11 +211,13 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 let findShortest = (data) => {
   // Solution code here...
   // return data.reduce((a, b) => a.length <= b.length ? a : b);
-  let shortest = data.map(elements => {
-    let heightNum = parseInt(elements.height);
-    return Math.min(heightNum);
+  data.sort((a,b)=>{
+    if (a.height >b.height)return -1;
+    else if(a.height < b.height)return 1;
+    else return 0;
   });
-  return shortest;
+
+  return data[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
