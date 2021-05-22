@@ -31,13 +31,13 @@ class linkedList {
     }
 
     let temp = this.head;
-    while(temp.next !== value){
-      if(temp === null){
-        return false;
+    while(temp){
+      if(temp.value === value){
+        return true;
       }
       temp = temp.next;
     }
-    return true;
+    return false;
   }
 
   toString(){

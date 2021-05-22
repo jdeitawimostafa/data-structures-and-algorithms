@@ -11,3 +11,15 @@ Define a method called includes which takes any value as an argument and returns
 Define a method called toString which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL" .
 
+
+
+
+
+![image](./assets/cc5.jpg)
+
+
+
+
+
+
+![image](./assets/cc5(2).jpg)

@@ -45,8 +45,8 @@ describe('linked-list class',() => {
     newLL.insert(firstValue);
     newLL.insert(secondValue);
 
-    expect(newLL.head.firstValue).toEqual(firstValue);
-    expect(newLL.head.secondValue).toEqual(secondValue);
+    expect(newLL.head.value).toEqual(secondValue);
+    expect(newLL.head.next.value).toEqual(firstValue);
   });
 
   it ('Will return true when finding a value within the linked list that exists', () => {
@@ -74,7 +74,7 @@ describe('linked-list class',() => {
     newLinkedList.insert(secondValue);
     newLinkedList.insert(thirdValue);
 
-    expect(newLinkedList.toString()).toEqual('{ 5 } -> { 6 } -> { 8 } -> NULL');
+    expect(newLinkedList.toString()).toEqual('{ 8 } -> { 6 } -> { 5 } -> NULL');
   });
 });
 
