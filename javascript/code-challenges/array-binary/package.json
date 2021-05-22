@@ -1,0 +1,18 @@
+{
+  "name": "array-binary",
+  "version": "1.0.0",
+  "description": "* the user will add a number fro the sotred array , and the user want to get the indexOf this number in the sotred array .",
+  "main": "array-binary.js",
+  "scripts": {
+    "start": "node array-binary.js",
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}
