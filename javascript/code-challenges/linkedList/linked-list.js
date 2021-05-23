@@ -68,13 +68,13 @@ class linkedList {
   }
 
   insertBefore(value, newVal){
-    if(!value,newVal){
+    if(!value && newVal){
       throw new Error('You did not insert any value !!!');
     }
 
     let node = new Node(newVal);
 
-    if(this.head === value){
+    if(this.head.value === value){
       node.next = this.head;
       this.head = node;
     }
@@ -99,7 +99,7 @@ class linkedList {
 
 
   insertAfter(value, newVal){
-    if(!value,newVal){
+    if(!value&&newVal){
       throw new Error('You did not insert any value !!!');
     }
     let node = new Node(newVal);

@@ -23,3 +23,24 @@ Define a method called toString which takes in no arguments and returns a string
 
 
 ![image](./assets/cc5(2).jpg)
+
+***
+
+### code challenge 6 :
+
+* Write the following methods for the Linked List class:
+
+- append(value) which adds a new node with the given value to the end of the list
+- insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node .
+
+
+
+
+![image](./assets/cc6(1).jpg)
+
+
+
+
+
+![image](./assets/cc6.jpg)

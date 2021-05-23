@@ -103,7 +103,6 @@ describe('linked-list class',() => {
     ll.insert(4);
     ll.insertBefore(3,5);
     expect(ll.head.next.value).toEqual(5);
-
   });
 
   it('should successfully insert a node before the first node of a linked list',() => {
@@ -119,7 +118,7 @@ describe('linked-list class',() => {
     ll.insert(2);
     ll.insert(3);
     ll.insertAfter(2,4);
-    expect(ll.head.next.value).toEqual(4);
+    expect(ll.head.next.next.value).toEqual(4);
   });
 
   it('should successfully insert a node after the last node of the linked list',() => {
