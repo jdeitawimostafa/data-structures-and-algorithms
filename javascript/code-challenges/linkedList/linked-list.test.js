@@ -76,6 +76,59 @@ describe('linked-list class',() => {
 
     expect(newLinkedList.toString()).toEqual('{ 8 } -> { 6 } -> { 5 } -> NULL');
   });
+
+  it('should successfully add a node to the end of the linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    let lastVlaue = 10;
+    ll.append(lastVlaue);
+    expect(ll.head.next.value).toEqual(lastVlaue);
+  });
+
+  it('should successfully add multiple nodes to the end of a linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    let lastValue = 10;
+    let lastValue1 = 11;
+    ll.append(lastValue);
+    ll.append(lastValue1);
+    expect(ll.head.next.next.value).toEqual(lastValue1);
+  });
+
+  it('should successfully insert a node before a node located i the middle of a linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    ll.insert(4);
+    ll.insertBefore(3,5);
+    expect(ll.head.next.value).toEqual(5);
+
+  });
+
+  it('should successfully insert a node before the first node of a linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(6);
+    ll.insertBefore(6,7);
+    expect(ll.head.value).toEqual(7);
+  });
+
+  it('should successfully insert after a node in the middle of the linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    ll.insertAfter(2,4);
+    expect(ll.head.next.value).toEqual(4);
+  });
+
+  it('should successfully insert a node after the last node of the linked list',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insertAfter(1,3);
+    expect(ll.head.next.next.value).toEqual(3);
+  });
 });
 
 
