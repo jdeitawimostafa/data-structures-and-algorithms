@@ -44,3 +44,13 @@ Define a method called toString which takes in no arguments and returns a string
 
 
 ![image](./assets/cc6.jpg)
+
+
+### code challenge 7 :
+
+* Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+
+
+
+![image](./assets/CC7.png)

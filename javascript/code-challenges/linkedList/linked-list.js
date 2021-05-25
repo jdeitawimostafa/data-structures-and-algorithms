@@ -5,6 +5,7 @@ const Node = require('./node.js');
 class linkedList {
   constructor(){
     this.head = null;
+    this.tail = null;
   }
 
   insert(value){
@@ -119,6 +120,44 @@ class linkedList {
     }
   }
 
+  llkthFromEnd(k){
+    if(k===null||k<0){
+      throw new Error('You did not insert any value or the value is negative !!!');
+    }
+    let temp = this.head;
+    let length = 0;
+    while(temp !== null){
+      temp = temp.next;
+      length++;
+    }
+    console.log(length);
+    if(k>length-1){
+      throw new Error('k is greater than length of linkedlist ');
+    }
+    let distance = length-k-1;
+    temp = this.head;
+    while(distance !== 0){
+      temp = temp.next;
+      distance--;
+    }
+    return temp;
+  }
 }
 
 module.exports = linkedList;
+
+
+// if empty, return NOT_FOUND
+
+// index = 0, temp = head
+
+// while (temp.item != v)
+
+//   index++, temp = temp.next
+
+//   if temp == null
+
+//     return NOT_FOUND
+
+// return index
+

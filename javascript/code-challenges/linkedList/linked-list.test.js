@@ -128,6 +128,59 @@ describe('linked-list class',() => {
     ll.insertAfter(1,3);
     expect(ll.head.next.next.value).toEqual(3);
   });
+
+  it('should return not found when k is greater than length of linkedlist',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+
+    function notFound(){
+      ll.llkthFromEnd(4);
+    }
+
+    expect(notFound).toThrow();
+  });
+
+  it('should return false if the k equal to length of the linkedlist ',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    ll.insert(4);
+    function notFound(){
+      ll.llkthFromEnd(4);
+    }
+    expect(notFound).toThrow();
+  });
+
+  it('should return error when the k is not a positive integer',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    function notFound(){
+      let x = ll.llkthFromEnd(-1);
+      console.log('negative',x);
+    }
+    expect(notFound).toThrow();
+  });
+  it('should test if the length of the linkedlist is 1',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    let value = ll.llkthFromEnd(0);
+    expect(value.value).toEqual(1);
+  });
+
+  it('should return the value except the end or the begining',() => {
+    let ll = new LinkedList();
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    ll.insert(4);
+    let value =  ll.llkthFromEnd(2);
+    expect(value.value).toEqual(3);
+  });
 });
 
 
