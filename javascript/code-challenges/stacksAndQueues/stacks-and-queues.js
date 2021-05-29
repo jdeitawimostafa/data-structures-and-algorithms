@@ -57,18 +57,21 @@ class Stack{ //LIFO
 class Queue{ //FIFO
   constructor(){
     this.front = null;
+    this.length = 0;
   }
 
   enqueue(value){
     let node = new Node(value);
     if(this.front === null){
       this.front = node;
+      this.length+=1;
     } else{
       let temp = this.front;
       while(this.front.next !== null){
         temp = temp.next;
       }
       temp.next = node;
+      this.length = this.length+1;
     }
   }
 
@@ -78,6 +81,7 @@ class Queue{ //FIFO
     } else {
       let temp = this.front;
       temp = this.front.next;
+      this.length = this.length-1;
     }
   }
 
