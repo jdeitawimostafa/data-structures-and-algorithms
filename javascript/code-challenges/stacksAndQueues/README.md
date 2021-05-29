@@ -32,3 +32,7 @@ Should raise exception when called on empty queue .
 4. Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
 
 
+### The Big O (for all methods): 
+time -> O(1)
+space -> O(1) 
+
