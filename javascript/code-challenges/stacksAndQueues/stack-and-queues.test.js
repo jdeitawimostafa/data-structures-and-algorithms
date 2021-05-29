@@ -32,7 +32,7 @@ describe('stack-queue',() => {
     expect(sll.top.value).toBe(10);
   });
 
-  it('sohuld successfully empty a stack after multiple pops',() => {
+  it('should successfully empty a stack after multiple pops',() => {
     let sll = new Stack();
     sll.push(10);
     sll.push(11);
@@ -58,8 +58,10 @@ describe('stack-queue',() => {
 
   it('should Call pop or peek on empty stack raises exception',() =>{
     let sll = new Stack();
-    sll.peek();
-    expect(sll).toThrow('the stack is empty!!');
+    function Error(){
+      sll.peek();
+    }
+    expect(Error).toThrow();
   });
 
   it('should successfully enqueue into a queue',() => {
@@ -100,7 +102,21 @@ describe('stack-queue',() => {
     qll.dequeue();
     qll.dequeue();
 
-    expect(qll.front.value).toBeNull();
+    expect(qll.length).toEqual(0);
+  });
+
+  it('should successfully instantiate an empty queue',() => {
+    let qll = new Queue();
+    qll.enqueue(10);
+    expect(qll.front.value).toBe(10);
+  });
+
+  it('should dequeue or peek on empty queue raises exception',() => {
+    let qll = new Queue();
+    function Erorr(){
+      qll.peek();
+    }
+    expect(Erorr).toThrow();
   });
 });
 
