@@ -1,0 +1,15 @@
+{
+  "name": "queueWithStacks",
+  "version": "1.0.0",
+  "main": "queue-with-stacks.js",
+  "scripts": {
+    "test": "jest --verbose --coverage --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^27.0.3"
+  }
+}
