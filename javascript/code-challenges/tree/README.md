@@ -23,8 +23,19 @@ An important aspect of trees is how to traverse them. Traversing a tree allows u
 
 ![tree](https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png)
 
-## Whiteboard :
+## Whiteboard for code challenge 15 :
+
 
 
 
 ![whteboard](./cc15.PNG)
+
+
+
+
+### Whiteboard for code challenge 16 :
+
+
+
+
+![whiteboard](./cc16.PNG)

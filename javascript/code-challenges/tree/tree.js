@@ -61,6 +61,16 @@ class BinaryTree{
     travrese(this.root);
     return resultArray;
   }
+
+  findmaximumvalue(binaryTreeArray){
+    let checkValue = binaryTreeArray[0];
+    for(let i=1; i<binaryTreeArray.length;i++){
+      if(binaryTreeArray[i] > checkValue){
+        checkValue = binaryTreeArray[i];
+      }
+    }
+    return checkValue;
+  }
 }
 
 class BinarySearchTree{
