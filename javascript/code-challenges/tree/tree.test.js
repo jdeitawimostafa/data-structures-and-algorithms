@@ -66,4 +66,28 @@ describe('binary-tree',() => {
 
     expect(postOrderResult).toEqual(expected);
   });
+
+  it('should return the maximum value in the binary-tree-array',() => {
+
+    let preOrder = tree.preOrder();
+
+    let maximumValue = tree.findmaximumvalue(preOrder);
+
+    expect(maximumValue).toBe(9);
+  });
+  it('should return the maximum value in the binary-tree-array',() => {
+
+    let inOrder = tree.inOrder();
+
+    let maximumValue = tree.findmaximumvalue(inOrder);
+
+    expect(maximumValue).toBe(9);
+  });
+  it('should return the maximum value in the binary-tree-array',() => {
+
+    let postOrder = tree.postOrder();
+    let maximumValue = tree.findmaximumvalue(postOrder);
+
+    expect(maximumValue).toBe(9);
+  });
 });
