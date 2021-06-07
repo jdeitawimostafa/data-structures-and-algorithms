@@ -71,6 +71,28 @@ class BinaryTree{
     }
     return checkValue;
   }
+
+  breadthFirst(){
+    let breadthFirstArray = [];
+    let result = [];
+    if(this.root === null){
+      throw new Error('the tree is empty !');
+    } else {
+      breadthFirstArray.push(this.root);
+    }
+
+    while(breadthFirstArray.length !== 0){
+      let curr = breadthFirstArray.shift();
+      result.push(curr.value);
+      if(curr.left){
+        breadthFirstArray.push(curr.left);
+      }
+      if(curr.right){
+        breadthFirstArray.push(curr.right);
+      }
+    }
+    return result;
+  }
 }
 
 class BinarySearchTree{
