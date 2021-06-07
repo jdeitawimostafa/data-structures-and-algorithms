@@ -90,4 +90,22 @@ describe('binary-tree',() => {
 
     expect(maximumValue).toBe(9);
   });
+
+  it('should return an array with traversal breadth first method',() => {
+    let expected = [1,2,3,6,4,5,7,8,9];
+
+    let breadthFirstTraversal = tree.breadthFirst();
+    console.log('dd',breadthFirstTraversal);
+
+    expect(breadthFirstTraversal).toEqual(expected);
+  });
+
+  it('should throw an error if the tree is empty',() => {
+    let emptyTree = new trees.BinaryTree();
+
+    function eroor(){
+      emptyTree.breadthFirst();
+    }
+    expect(eroor).toThrow();
+  });
 });

@@ -17,8 +17,8 @@
 
 An important aspect of trees is how to traverse them. Traversing a tree allows us to search for a node, print out the contents of a tree, and much more! There are two categories of traversals when it comes to trees:
 
-1. Depth First. 
-2. Breadth First. 
+1. Depth First : Depth first traversal is where we prioritize going through the depth (height) of the tree first .
+2. Breadth First : Breadth first traversal iterates through the tree by going through each level of the tree node-by-node.
 
 
 ![tree](https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png)
@@ -39,3 +39,10 @@ An important aspect of trees is how to traverse them. Traversing a tree allows u
 
 
 ![whiteboard](./cc16.PNG)
+
+
+### Whiteboard for code challenge 17 :
+
+
+
+![whiteboard](./cc17.PNG)
