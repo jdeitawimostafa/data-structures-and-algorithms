@@ -3,35 +3,47 @@
 class Node{
   constructor(value){
     this.value = value;
+    this.children = [];
   }
 }
 
 class kAryTree{
   constructor(root=null){
     this.root = root;
-    this.children = [];
   }
 
 }
 
 
-function FizzBuzzTree(kTree){
-  let newTree = new kAryTree();
-  while(kTree.length !== 0){
-    if(kTree.value%3 === 0 && kTree.value%5 === 0){
-      newTree.children.push('“FizzBuzz”');
-    } else if(kTree.value%3 === 0){
-      newTree.children.push('“Fizz”');
-    } else if(kTree.value%5 === 0){
-      newTree.children.push('“Buzz”');
+function FizzBuzzTree(kAryTree){
+  if(!kAryTree.root){
+    throw new Error('the tree is empty !!');
+  }
+
+  kAryTree.root.value = test(kAryTree.root.value);
+
+  const check = (node) =>{
+    for(let i=0; i<node.children.length;i++){
+      node.value = test(node.value);
+    }
+  };
+
+  function test(value){
+    if(value%3 === 0 && value%5 === 0){
+      return 'fizzBuzz';
+    } else if(value%3 === 0){
+      return 'fizz';
+    } else if(value%5 === 0){
+      return 'buzz';
     } else {
-      newTree.children.push(kTree.value).toString();
+      return `${value}`;
     }
   }
-  return newTree;
+  return kAryTree;
 }
 
-module.exports = {kAryTree:kAryTree,FizzBuzzTree:FizzBuzzTree};
+
+module.exports = {Node,kAryTree,FizzBuzzTree};
 
 
 

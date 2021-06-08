@@ -1,15 +1,26 @@
 'use strict';
 
-const tree = require('./fizz-buzz-tree.js');
+const {Node,kAryTree,FizzBuzzTree} = require('./fizz-buzz-tree.js');
 
-let node = new tree.kAryTree(10);
-node.children[0]=new tree.kAryTree(5);
-node.children[1]=new tree.kAryTree(2);
-node.children[2]=new tree.kAryTree(3);
-node.children[0].children[0]= new tree.kAryTree(7);
-node.children[1].children[0]= new tree.kAryTree(2);
-node.children[1].children[1]= new tree.kAryTree(4);
-node.children[2].children[0]= new tree.kAryTree(30);
-node.children[2].children[1]= new tree.kAryTree(6);
-node.children[2].children[2]= new tree.kAryTree(1);
-node;
+let tree;
+
+describe('k-array-tree',() => {
+  beforeAll(() => {
+    let one = new Node(1);
+    let two = new Node(4);
+    let three = new Node(3);
+    let four = new Node(6);
+    let five = new Node(9);
+    let six = new Node(8);
+
+    one.children.push(three,five,six,two);
+    four.children.push(six);
+
+    tree = new kAryTree(one);
+  });
+
+  it('should throw an error if the tree is empty',() => {
+  });
+});
+
+
