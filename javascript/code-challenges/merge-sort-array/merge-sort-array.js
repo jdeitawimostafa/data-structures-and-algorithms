@@ -1,17 +1,17 @@
 'use strict';
 
-const _mergeArrays = (array, array2) => {
+const _mergeArrays = (a, b) => {
   const c = [];
 
-  while (array.length && array2.length) {
-    c.push(array[0] > array2[0] ? array2.shift() : array.shift());
+  while (a.length && b.length) {
+    c.push(a[0] > b[0] ? b.shift() : a.shift());
   }
 
-  while (array.length) {
-    c.push(array.shift());
+  while (a.length) {
+    c.push(a.shift());
   }
-  while (array2.length) {
-    c.push(array2.shift());
+  while (b.length) {
+    c.push(b.shift());
   }
 
   return c;
