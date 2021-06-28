@@ -99,8 +99,7 @@ class BinaryTree{
 function treeIntersection(binary1,binary2){
 
   if(!binary1 && !binary2) {
-    console.log('inside');
-    throw new Error('Exception');
+    throw new Error('you should enter two trees');
   }
 
   let matchingvalues=[];
